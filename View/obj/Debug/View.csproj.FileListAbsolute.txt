@@ -1,0 +1,15 @@
+c:\users\65978\source\repos\ExemploBancoDados02\View\bin\Debug\View.exe.config
+c:\users\65978\source\repos\ExemploBancoDados02\View\bin\Debug\View.exe
+c:\users\65978\source\repos\ExemploBancoDados02\View\bin\Debug\View.pdb
+c:\users\65978\source\repos\ExemploBancoDados02\View\obj\Debug\View.csprojAssemblyReference.cache
+c:\users\65978\source\repos\ExemploBancoDados02\View\obj\Debug\View.Properties.Resources.resources
+c:\users\65978\source\repos\ExemploBancoDados02\View\obj\Debug\View.csproj.GenerateResource.cache
+c:\users\65978\source\repos\ExemploBancoDados02\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+c:\users\65978\source\repos\ExemploBancoDados02\View\obj\Debug\View.exe
+c:\users\65978\source\repos\ExemploBancoDados02\View\obj\Debug\View.pdb
+C:\Users\65978\source\repos\ExemploBancoDados02\View\bin\Debug\Model.dll
+C:\Users\65978\source\repos\ExemploBancoDados02\View\bin\Debug\Repositorio.dll
+C:\Users\65978\source\repos\ExemploBancoDados02\View\bin\Debug\Model.pdb
+C:\Users\65978\source\repos\ExemploBancoDados02\View\bin\Debug\Repositorio.pdb
+C:\Users\65978\source\repos\ExemploBancoDados02\View\obj\Debug\View.Form1.resources
+C:\Users\65978\source\repos\ExemploBancoDados02\View\obj\Debug\View.csproj.CopyComplete
