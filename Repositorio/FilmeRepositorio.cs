@@ -60,5 +60,71 @@ namespace Repositorio
             //retorna a lista de filmes
             return filmes;
         }
+
+        public Filme ObterPeloId()
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaDeConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = "SELECT * filmes WHERE id = @ID";
+
+            comando.Parameters.AddWithValue("ID", id);
+            DataTable dataTable = new DataTable();
+            dataTable.Load(comando.ExecuteReader());
+            if (dataTable.Rows.Count == 1)
+            {
+                DataRow linha = dataTable.Rows[0];
+                Filme filme = new Filme();
+                filme.Id = Convert.ToInt32(linha["id"]);
+                filme.Nome = linha["nome"].ToString();
+                filme.Categoria = linha["categoria"].ToString();
+                filme.Curtiu = Convert.ToBoolean(linha["curtiu"]);
+                filme.Duracao = Convert.ToDateTime(linha["duracao"]);
+                filme.avaliacao = Convert.ToDecimal(linha["avaliacao"]);
+                filme.TemSequencia = Convert.ToBoolean(linha["tem_sequencia"]);
+                return filme;
+            }
+            return null;
+
+
+
+
+
+
+
+
+        }
+
+        public void Inserir(Filme filme)
+        {
+
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaDeConexao;
+            conexao.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"INSERIR INTO filmes (nome,categoria,curtiu,duracao,avaliacao,tem_sequencia)VALUES(@NOME,@CATEGORIA,@CURTIU,@DURACAO,@AVALIACAO,@TEM_SEQUENCIA)";
+            comando.Parameters.AddWithValue("@NOME", filme.Nome);
+            comando.Parameters.AddWithValue("@CATEGORIA", filme.Categoria);
+            comando.Parameters.AddWithValue("@CURTIU",filme.Curtiu);
+            comando.Parameters.AddWithValue("@DURACAO",filme.Duracao);
+            comando.Parameters.AddWithValue("@AVALIACAO",filme.avaliacao);
+            comando.Parameters.AddWithValue("@TEM_SEQUENCIA",filme.TemSequencia);
+
+
+
+
+
+
+
+        }
+
     }
+
+    
+
 }
