@@ -17,7 +17,7 @@ namespace Repositorio
         public List<Filme> ObterTodos()
         {
 
-             //* Cria conexao com banco de dados e abre.
+            //* Cria conexao com banco de dados e abre.
 
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaDeConexao;
@@ -111,10 +111,10 @@ namespace Repositorio
             comando.CommandText = @"INSERIR INTO filmes (nome,categoria,curtiu,duracao,avaliacao,tem_sequencia)VALUES(@NOME,@CATEGORIA,@CURTIU,@DURACAO,@AVALIACAO,@TEM_SEQUENCIA)";
             comando.Parameters.AddWithValue("@NOME", filme.Nome);
             comando.Parameters.AddWithValue("@CATEGORIA", filme.Categoria);
-            comando.Parameters.AddWithValue("@CURTIU",filme.Curtiu);
-            comando.Parameters.AddWithValue("@DURACAO",filme.Duracao);
-            comando.Parameters.AddWithValue("@AVALIACAO",filme.avaliacao);
-            comando.Parameters.AddWithValue("@TEM_SEQUENCIA",filme.TemSequencia);
+            comando.Parameters.AddWithValue("@CURTIU", filme.Curtiu);
+            comando.Parameters.AddWithValue("@DURACAO", filme.Duracao);
+            comando.Parameters.AddWithValue("@AVALIACAO", filme.avaliacao);
+            comando.Parameters.AddWithValue("@TEM_SEQUENCIA", filme.TemSequencia);
 
 
 
@@ -138,8 +138,26 @@ namespace Repositorio
             conexao.Close();
         }
 
+        public void Atualizar(Filme filme)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = CadeiaDeConexao;
+            conexao.Open();
 
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"UPDATE filmes SET nome = @NOME,categoria = @CATEGORIA,curtiu = @CURTIU,duracao = @DURACAO,avaliacao = @AVALIACAO,tem_sequencia = @TEM_SEQUENCIA WHERE id = @ID";
+            comando.Parameters.AddWithValue("@NOME",filme.Nome);
+            comando.Parameters.AddWithValue("@CATEGORIA", filme.Categoria);
+            comando.Parameters.AddWithValue("@CURTIU", filme.Curtiu);
+            comando.Parameters.AddWithValue("@DURACAO", filme.Duracao);
+            comando.Parameters.AddWithValue("@AVALIACAO", filme.avaliacao);
+            comando.Parameters.AddWithValue("@TEM_SEQUENCIA", filme.TemSequencia);
+            comando.Parameters.AddWithValue("@ID", filme.Id);
 
+            comando.ExecuteNonQuery();
+            conexao.Close();
+        }
 
     }
 
