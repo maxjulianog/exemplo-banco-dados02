@@ -108,14 +108,15 @@ namespace Repositorio
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = @"INSERIR INTO filmes (nome,categoria,curtiu,duracao,avaliacao,tem_sequencia)VALUES(@NOME,@CATEGORIA,@CURTIU,@DURACAO,@AVALIACAO,@TEM_SEQUENCIA)";
+            comando.CommandText = @"INSERT INTO filmes (nome,categoria,curtiu,duracao,avaliacao,tem_sequencia) VALUES (@NOME,@CATEGORIA,@CURTIU,@DURACAO,@AVALIACAO,@TEM_SEQUENCIA)";
             comando.Parameters.AddWithValue("@NOME", filme.Nome);
             comando.Parameters.AddWithValue("@CATEGORIA", filme.Categoria);
             comando.Parameters.AddWithValue("@CURTIU", filme.Curtiu);
             comando.Parameters.AddWithValue("@DURACAO", filme.Duracao);
             comando.Parameters.AddWithValue("@AVALIACAO", filme.avaliacao);
             comando.Parameters.AddWithValue("@TEM_SEQUENCIA", filme.TemSequencia);
-
+            comando.ExecuteNonQuery();
+            conexao.Close();
 
 
 
@@ -124,7 +125,7 @@ namespace Repositorio
 
         }
 
-        public void Delete(int id)
+        public void Apagar(int id)
         {
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = CadeiaDeConexao;

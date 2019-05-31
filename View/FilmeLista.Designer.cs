@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class Form1
+    partial class FilmeLista
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,23 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(627, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 420);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -79,15 +70,37 @@
             this.ColumnCategoria.Name = "ColumnCategoria";
             this.ColumnCategoria.ReadOnly = true;
             // 
-            // Form1
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Location = new System.Drawing.Point(628, 149);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(160, 127);
+            this.btnCadastrar.TabIndex = 3;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnApagar
+            // 
+            this.btnApagar.Location = new System.Drawing.Point(628, 16);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(160, 127);
+            this.btnApagar.TabIndex = 4;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
+            // FilmeLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnApagar);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "FilmeLista";
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.FilmeLista_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -95,12 +108,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCategoria;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnApagar;
     }
 }
 

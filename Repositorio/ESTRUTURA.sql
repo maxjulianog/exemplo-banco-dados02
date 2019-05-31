@@ -16,3 +16,4 @@ VALUES
 ('Professor !(não) é bipolar',5.3,'2000-01-01 01:45:00',1,'Ação',0);
 
 
+SELECT * FROM filmes;
