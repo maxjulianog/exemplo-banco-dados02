@@ -19,12 +19,31 @@ namespace View
             InitializeComponent();
         }
 
+        public FilmeEditar(Filme filme)
+        {
+            InitializeComponent();
+            txtNome.Text = filme.Nome;
+            txtId.Text = filme.Id.ToString();
+            txtAvaliacao.Text = Convert.ToString(filme.avaliacao);
+            txtDuracao.Text = filme.Duracao.ToString("yyyy-MM-dd hh:mm:ss");
+            cbCategoria.SelectedItem = filme.Categoria;
+            ckbTemSequencia.Checked = filme.TemSequencia;
+            if (filme.Curtiu)
+            {
+                rbSim.Checked = true;
+            }
+            else
+            {
+                rbNao.Checked = true;
+            }
+        }
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Filme filme = new Filme();
             filme.Id = Convert.ToInt32(txtId.Text);
             filme.Nome = txtNome.Text;
-            filme.Curtiu = rbtSim.Checked;
+            filme.Curtiu = rbSim.Checked;
             filme.TemSequencia = ckbTemSequencia.Checked;
             filme.Duracao = Convert.ToDateTime(txtDuracao.Text);
             filme.avaliacao = Convert.ToDecimal(txtAvaliacao.Text);
@@ -32,6 +51,8 @@ namespace View
             FilmeRepositorio repositorio = new FilmeRepositorio();
             repositorio.Atualizar(filme);
 
+            MessageBox.Show("Editado com sucesso.");
+            Close();
         }
     }
 }

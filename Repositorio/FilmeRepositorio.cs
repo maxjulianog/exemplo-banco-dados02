@@ -69,7 +69,7 @@ namespace Repositorio
 
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
-            comando.CommandText = "SELECT * filmes WHERE id = @ID";
+            comando.CommandText = "SELECT * FROM filmes WHERE id = @ID";
 
             comando.Parameters.AddWithValue("ID", id);
             DataTable dataTable = new DataTable();

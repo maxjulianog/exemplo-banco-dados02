@@ -33,8 +33,8 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.ckbTemSequencia = new System.Windows.Forms.CheckBox();
             this.txtDuracao = new System.Windows.Forms.TextBox();
-            this.rdbNao = new System.Windows.Forms.RadioButton();
-            this.rbtSim = new System.Windows.Forms.RadioButton();
+            this.rbNao = new System.Windows.Forms.RadioButton();
+            this.rbSim = new System.Windows.Forms.RadioButton();
             this.lblDuracao = new System.Windows.Forms.Label();
             this.lblCurtiu = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
@@ -88,27 +88,27 @@
             this.txtDuracao.Size = new System.Drawing.Size(134, 20);
             this.txtDuracao.TabIndex = 21;
             // 
-            // rdbNao
+            // rbNao
             // 
-            this.rdbNao.AutoSize = true;
-            this.rdbNao.Location = new System.Drawing.Point(104, 171);
-            this.rdbNao.Name = "rdbNao";
-            this.rdbNao.Size = new System.Drawing.Size(45, 17);
-            this.rdbNao.TabIndex = 20;
-            this.rdbNao.TabStop = true;
-            this.rdbNao.Text = "Não";
-            this.rdbNao.UseVisualStyleBackColor = true;
+            this.rbNao.AutoSize = true;
+            this.rbNao.Location = new System.Drawing.Point(104, 171);
+            this.rbNao.Name = "rbNao";
+            this.rbNao.Size = new System.Drawing.Size(45, 17);
+            this.rbNao.TabIndex = 20;
+            this.rbNao.TabStop = true;
+            this.rbNao.Text = "Não";
+            this.rbNao.UseVisualStyleBackColor = true;
             // 
-            // rbtSim
+            // rbSim
             // 
-            this.rbtSim.AutoSize = true;
-            this.rbtSim.Location = new System.Drawing.Point(15, 171);
-            this.rbtSim.Name = "rbtSim";
-            this.rbtSim.Size = new System.Drawing.Size(42, 17);
-            this.rbtSim.TabIndex = 19;
-            this.rbtSim.TabStop = true;
-            this.rbtSim.Text = "Sim";
-            this.rbtSim.UseVisualStyleBackColor = true;
+            this.rbSim.AutoSize = true;
+            this.rbSim.Location = new System.Drawing.Point(15, 171);
+            this.rbSim.Name = "rbSim";
+            this.rbSim.Size = new System.Drawing.Size(42, 17);
+            this.rbSim.TabIndex = 19;
+            this.rbSim.TabStop = true;
+            this.rbSim.Text = "Sim";
+            this.rbSim.UseVisualStyleBackColor = true;
             // 
             // lblDuracao
             // 
@@ -196,8 +196,8 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.ckbTemSequencia);
             this.Controls.Add(this.txtDuracao);
-            this.Controls.Add(this.rdbNao);
-            this.Controls.Add(this.rbtSim);
+            this.Controls.Add(this.rbNao);
+            this.Controls.Add(this.rbSim);
             this.Controls.Add(this.lblDuracao);
             this.Controls.Add(this.lblCurtiu);
             this.Controls.Add(this.cbCategoria);
@@ -218,8 +218,8 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.CheckBox ckbTemSequencia;
         private System.Windows.Forms.TextBox txtDuracao;
-        private System.Windows.Forms.RadioButton rdbNao;
-        private System.Windows.Forms.RadioButton rbtSim;
+        private System.Windows.Forms.RadioButton rbNao;
+        private System.Windows.Forms.RadioButton rbSim;
         private System.Windows.Forms.Label lblDuracao;
         private System.Windows.Forms.Label lblCurtiu;
         private System.Windows.Forms.ComboBox cbCategoria;
